@@ -42,8 +42,8 @@ export class PersonaComponent implements OnInit {
       id:[''],
       nombre: ['',Validators.required],
       fechaNacimiento: ['',Validators.required],
-      sector: ['', Validators.min(1)],
-      zona : ['', Validators.min(1)],
+      sector: ['', Validators.required],
+      zona : ['', Validators.required],
       sueldo: ['', Validators.required]
     })
   }
@@ -68,6 +68,7 @@ export class PersonaComponent implements OnInit {
           zona: this.formulario.get('zona')?.value,
           sueldo: this.formulario.get('sueldo')?.value
     }
+
 
     console.log(persona);
 
